@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
     <!-- Logo at the top -->
     <div class="logo-container">
@@ -14,7 +16,15 @@
     </div>
 
     <!-- Starting of daily table -->
-    <table dir="ltr" cellspacing="0" cellpadding="0">
+    <table dir="ltr" cellspacing="0" cellpadding="0" data-sheets-root="1" data-sheets-baot="1">
+        <colgroup>
+            <col width="100" />
+            <col width="100" />
+            <col width="100" />
+            <col width="100" />
+            <col width="100" />
+            <col width="100" />
+        </colgroup>
         <tbody>
             <tr>
                 <td colspan="6" rowspan="1">Canopy Daily</td>
@@ -28,33 +38,33 @@
                 <td>Showups</td>
             </tr>
             <tr>
-                <td>Ibrahim</td>
-                <td>13</td>
-                <td>55</td>
-                <td>35</td>
-                <td>&nbsp;</td>
-                <td>1</td>
-            </tr>
-            <tr>
                 <td>Daniyal</td>
-                <td>13</td>
-                <td>56</td>
-                <td>44</td>
-                <td>1</td>
+                <td>27</td>
+                <td>53</td>
+                <td>10</td>
+                <td>3</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td>Gareth</td>
                 <td>0</td>
                 <td>0</td>
-                <td>10</td>
+                <td>47</td>
+                <td>1</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Ibrahim</td>
+                <td>7</td>
+                <td>50</td>
+                <td>14</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
                 <td>Kurt</td>
-                <td>12</td>
-                <td>93</td>
+                <td>61</td>
+                <td>18</td>
                 <td>0</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -64,7 +74,15 @@
     <!-- Ending of daily table -->
 
     <!-- Starting of Monthly Table -->
-    <table dir="ltr" cellspacing="0" cellpadding="0">
+    <table dir="ltr" cellspacing="0" cellpadding="0" data-sheets-root="1" data-sheets-baot="1">
+        <colgroup>
+            <col width="100" />
+            <col width="100" />
+            <col width="100" />
+            <col width="100" />
+            <col width="100" />
+            <col width="100" />
+        </colgroup>
         <tbody>
             <tr>
                 <td colspan="6" rowspan="1">Canopy Monthly</td>
@@ -79,35 +97,35 @@
             </tr>
             <tr>
                 <td>Ibrahim</td>
-                <td>638</td>
-                <td>1022</td>
-                <td>673</td>
+                <td>643</td>
+                <td>1081</td>
+                <td>677</td>
                 <td>7</td>
                 <td>7</td>
             </tr>
             <tr>
                 <td>Gareth</td>
-                <td>1008</td>
+                <td>1080</td>
                 <td>1586</td>
-                <td>1261</td>
-                <td>6</td>
-                <td>4</td>
+                <td>1301</td>
+                <td>7</td>
+                <td>5</td>
             </tr>
             <tr>
                 <td>Daniyal</td>
-                <td>1120</td>
-                <td>896</td>
-                <td>670</td>
-                <td>3</td>
+                <td>1189</td>
+                <td>920</td>
+                <td>684</td>
+                <td>6</td>
                 <td>3</td>
             </tr>
             <tr>
                 <td>Kurt</td>
-                <td>671</td>
+                <td>732</td>
                 <td>815</td>
                 <td>159</td>
                 <td>1</td>
-                <td>&nbsp;</td>
+                <td>1</td>
             </tr>
         </tbody>
     </table>
@@ -124,22 +142,23 @@
     <!-- JavaScript for the charts -->
     <script>
         // Data for the Activities chart
+        // Data for the Activities chart
         const activitiesData = {
             labels: ["Ibrahim", "Gareth", "Daniyal", "Kurt"],
             datasets: [
                 {
                     label: "Email",
-                    data: [638, 1008, 1120, 671],
+                    data: [643, 1080, 1189, 732],
                     backgroundColor: "rgba(255, 159, 64, 0.6)",
                 },
                 {
                     label: "Tasks",
-                    data: [1022, 1586, 896, 815],
+                    data: [1081, 1586, 920, 815],
                     backgroundColor: "rgba(75, 192, 192, 0.6)",
                 },
                 {
                     label: "Calls",
-                    data: [673, 1261, 670, 159],
+                    data: [677, 1301, 684, 159],
                     backgroundColor: "rgba(153, 102, 255, 0.6)",
                 },
             ],
@@ -174,12 +193,12 @@
             datasets: [
                 {
                     label: "Appointments",
-                    data: [7, 6, 3, 1],
+                    data: [7, 7, 6, 1],
                     backgroundColor: "rgba(54, 162, 235, 0.6)",
                 },
                 {
                     label: "Showups",
-                    data: [7, 4, 3, 0],
+                    data: [7, 5, 3, 1],
                     backgroundColor: "rgba(255, 99, 132, 0.6)",
                 },
             ],
@@ -207,6 +226,8 @@
 
         // Render the Success chart
         new Chart(document.getElementById("successChart"), successConfig);
+
     </script>
 </body>
+
 </html>
