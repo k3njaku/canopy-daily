@@ -64,8 +64,7 @@ tbody tr:first-child {
 }
 
 .chart-container {
-    width: 100%;
-    max-width: 500px;  /* Set max width for responsiveness */
-    height: 300px;      /* Fixed height */
-    margin: 0 auto;
+    width: 80%;       /* Match the width of the tables */
+    height: 400px;    /* Increase height to make charts more prominent */
+    margin: 20px auto; /* Add margin to separate charts */
 }
